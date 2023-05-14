@@ -1,0 +1,111 @@
+Use the following tools at your disposal and answer some questions:
+・<< Calculator >>
+・<< Chemical reaction predictor >>
+・<< Molar mass list >>
+
+Q: How many moles of Chlorine are required to react with 3 moles of Methane to form 3 moles of Dichloromethane along with 6 moles of Hydrochrolic acid
+A: First, use the chemical reaction predictor to determine the chemical equation for the reaction.
+Reactants: ?Cl2, 3CH4
+Products: 3CH2Cl2, 6HCl
+<< Chemical reaction predictor >>
+6Cl2 + 3CH4 → 3CH2Cl2 + 6HCl
+
+Therefore, 6 moles of Chlorine are required.
+
+Q: Find the mass percentage of N in Dinitrogen pentoxide
+A: First, use the molar mass list to determine the molar mass of Dinitrogen pentoxide.
+N2O5 << Molar mass list >> 108 g/mol
+
+Second, use the molar mass list to determine the molar mass of N.
+N << Molar mass list >> 14 g/mol
+
+Third, use the calculator to calculate the mass percentage of N in Dinitrogen pentoxide.
+14 x 2 / 108 x 100 = << Calculator >> 25.93
+
+Therefore, the mass percentage of N in Dinitrogen pentoxide is 25.93%.
+
+Q: Penelope decided to save 24 dollars every day for an entire year. Calculate the amount of money Penelope would have saved at the end of the year
+A: First, use the calculator to calculate the amount of money Penelope would have saved at the end of the year.
+24 x 365 = << Calculator >> 8760
+
+Therefore, Penelope would have saved 8760 dollars at the end of the year.
+
+Q: Find the mass percentage of B in H3BO3 Let's think step by step.
+A: First, use the molar mass list to determine the molar mass of H3BO3.
+H3BO3 << Molar mass list >> 62 g/mol
+
+Second, use the molar mass list to determine the molar mass of B.
+B << Molar mass list >> 11 g/mol
+
+Third, use the calculator to calculate the mass percentage of B in H3BO3.
+10.81 / 61 x 100 = << Calculator >> 17.74
+
+Therefore, the mass percentage of B in H3BO3 is 17.74%.
+
+Q: Find the number of moles of H2O formed on combining 2 moles of HCl and 2 moles of NaHCO3
+A: First, use the chemical reaction predictor to determine the chemical equation for the reaction.
+Reactants: 2HCl, 2NaHCO3
+Products: 2NaCl, ?H2O, 2CO2
+<< Chemical reaction predictor >>
+2HCl + 2NaHCO3 → 2NaCl + 2H2O + 2CO2
+
+Therefore, 2 moles of H2O are formed.
+
+Q: Find the amount of BaO that is required to react with 3 moles of H2O to form 3 moles of Ba(OH)2
+A: First, use the chemical reaction predictor to determine the chemical equation for the reaction.
+Reactants: ?BaO, 3H2O
+Products: 3Ba(OH)2
+<< Chemical reaction predictor >>
+3BaO + 3H2O → 3Ba(OH)2
+
+Second, use the molar mass list to determine the molar mass of BaO.
+BaO << Molar mass list >> 153 g/mol
+
+Third, use the calculator to calculate the amount of 3 moles of BaO.
+3 x 153 = << Calculator >> 459
+
+Therefore, 459 g of BaO is required.
+
+Q: Find the number of moles of Water formed on combining 3 moles of Methane and 6 moles of Oxygen
+A: First, use the chemical reaction predictor to determine the chemical equation for the reaction.
+Reactants: 3CH4, 6O2
+Products: ?H2O, 3CO2
+<< Chemical reaction predictor >>
+3CH4 + 6O2 → 6H2O + 3CO2
+
+Therefore, 6 moles of Water are formed.
+
+Q: What is the molecular weight of 6 moles of Chlorous acid?
+A: First, use the molar mass list to determine the molar mass of Chlorous acid.
+HClO2 << Molar mass list >> 68 g/mol
+
+Second, use the calculator to calculate the molecular weight of 6 moles of Chlorous acid.
+6 x 68 = << Calculator >> 408
+
+Therefore, the molecular weight of 6 moles of Chlorous acid is 408 g/mol.
+
+Q: What is the molecular weight of a compound having 2 Potassium, 2 Chromium, and 7 Oxygen?
+A: First, use the molar mass list to determine the molar mass of Potassium, Chromium, and Oxygen.
+K << Molar mass list >> 39 g/mol
+Cr << Molar mass list >> 52 g/mol
+O << Molar mass list >> 16 g/mol
+
+Second, use the calculator to calculate the molecular weight of the compound.
+2 x 39 + 2 x 52 + 7 x 16 = << Calculator >> 294
+
+Therefore, the molecular weight of the compound is 294 g/mol.
+
+Q: Find the amount of Tetrachloromethane formed on combining 1 mole of Ethane and 7 moles of Chlorine.
+A: First, use the chemical reaction predictor to determine the chemical equation for the reaction.
+Reactants: C2H6, 7Cl2
+Products: ?CCl4, 4HCl
+<< Chemical reaction predictor >>
+C2H6 + 7Cl2 → 2CCl4 + 6HCl
+
+Second, use the molar mass list to determine the molar mass of Tetrachloromethane.
+CCl4 << Molar mass list >> 152 g/mol
+
+Third, use the calculator to calculate the amount of 2 moles of Tetrachloromethane.
+2 x 152 = << Calculator >> 304
+
+Therefore, 304 g of Tetrachloromethane is formed.

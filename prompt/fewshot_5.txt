@@ -1,0 +1,67 @@
+Use the following tools at your disposal and answer some questions:
+・<< Calculator >>
+・<< Chemical reaction predictor >>
+・<< Molar mass list >>
+
+Q: How many moles of Chlorine are required to react with 3 moles of Methane to form 3 moles of Dichloromethane along with 6 moles of Hydrochrolic acid
+A: First, use the chemical reaction predictor to determine the chemical equation for the reaction.
+Reactants: ?Cl2, 3CH4
+Products: 3CH2Cl2, 6HCl
+<< Chemical reaction predictor >>
+6Cl2 + 3CH4 → 3CH2Cl2 + 6HCl
+
+Therefore, 6 moles of Chlorine are required.
+
+Q: Find the mass percentage of N in Dinitrogen pentoxide
+A: First, use the molar mass list to determine the molar mass of Dinitrogen pentoxide.
+N2O5 << Molar mass list >> 108 g/mol
+
+Second, use the molar mass list to determine the molar mass of N.
+N << Molar mass list >> 14 g/mol
+
+Third, use the calculator to calculate the mass percentage of N in Dinitrogen pentoxide. 
+14 x 2 / 108 x 100 = << Calculator >> 25.93
+
+Therefore, the mass percentage of N in Dinitrogen pentoxide is 25.93%.
+
+Q: Find the mass percentage of B in H3BO3.
+A: First, use the molar mass list to determine the molar mass of H3BO3.
+H3BO3 << Molar mass list >> 62 g/mol
+
+Second, use the molar mass list to determine the molar mass of B.
+B << Molar mass list >> 11 g/mol
+
+Third, use the calculator to calculate the mass percentage of B in H3BO3
+10.81 / 61 x 100 = << Calculator >> 17.74
+
+Therefore, the mass percentage of B in H3BO3 is 17.74%.
+
+Q: Find the amount of BaO that is required to react with 3 moles of H2O to form 3 moles of Ba(OH)2
+A: First, use the chemical reaction predictor to determine the chemical equation for the reaction.
+Reactants: ?BaO, 3H2O
+Products: 3Ba(OH)2
+<< Chemical reaction predictor >>
+3BaO + 3H2O → 3Ba(OH)2
+
+Second, use the molar mass lists to determine the molar mass of BaO.
+BaO << Molar mass list >> 153 g/mol
+
+Third, use the calculator to calculate the amount of 3 moles of BaO.
+3 x 153 = << Calculator >> 459
+
+Therefore, 459 g of BaO is required.
+
+Q: Find the amount of H2O formed on combining 3 moles of NaOH and 3 moles of H2SO4
+A: First, use the chemical reaction predictor to determine the chemical equation for the reaction.
+Reactants: 3NaOH, 3H2SO4
+Products: ?H2O, 3NaHSO4
+<< Chemical reaction predictor >>
+3NaOH + 3H2SO4 → 3NaHSO4 + 3H2O
+
+Second, use the molar mass list to determine the molar mass of H2O.
+H2O << Molar mass list >> 18 g/mol
+
+Third, use the calculator to calculate the amount of 6 moles of H2O.
+3 x 18 = << Calculator >> 54
+
+Therefore, 54 g of H2O is formed.
