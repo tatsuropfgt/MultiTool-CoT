@@ -41,8 +41,8 @@ def gpt3_tools(args, fewshot):
                 response_CAL = CAL(response_gpt[:-i-2])
                 prompt += ">> " + response_CAL + "\n"
                 answer += ">> " + response_CAL + "\n"
-            except ValueError as e:
-                print("Calculator error:", e)
+            except:  # noqa: E722
+                print("Error is raised in Calculator")
                 prompt += ">>"
                 answer += ">>"
 
@@ -51,8 +51,8 @@ def gpt3_tools(args, fewshot):
                 response_CRP = CRP(response_gpt[:-i-2])
                 prompt += ">>" + "\n" + response_CRP + "\n"
                 answer += ">>" + "\n" + response_CRP + "\n"
-            except ValueError as e:
-                print("Chemical reaction predictor error:", e)
+            except:  # noqa: E722
+                print("Error is raised in Chemical reaction predictor")
                 prompt += ">>"
                 answer += ">>"
 
@@ -61,8 +61,8 @@ def gpt3_tools(args, fewshot):
                 response_MML = MML(response_gpt[:-i-2])
                 prompt += ">> " + response_MML + "\n"
                 answer += ">> " + response_MML + "\n"
-            except ValueError as e:
-                print("Molar mass list error:", e)
+            except:  # noqa: E722
+                print("Error is raised in Molar mass list")
                 prompt += ">>"
                 answer += ">>"
         else:
