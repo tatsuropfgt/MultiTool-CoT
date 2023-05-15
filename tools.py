@@ -44,7 +44,7 @@ def CRP(text):
     while j <= len(text) and text[-j] != "\n":
         j += 1
     reactants = text[-j+1:-i].replace(",", "").split()[1:]
-    print("input:", products, "=>", reactants)
+    print("input:", reactants, "=>", products)
 
     # if there is a question mark in the reactants,
     # then the reaction is reversed temporarily
@@ -103,7 +103,10 @@ def CRP(text):
     if inv:
         reactants, products = products, reactants
 
-    return " + ".join(reactants) + " → " + " + ".join(products)
+    output = " + ".join(reactants) + " → " + " + ".join(products)
+    print("output:", output)
+
+    return output
 
 
 def MML(text):

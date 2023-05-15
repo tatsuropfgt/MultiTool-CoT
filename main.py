@@ -91,7 +91,7 @@ def main():
     parser.add_argument("--MML", default=True, help="whether to use Molecular Mass List")
     parser.add_argument("--fewshotnum", help="number of fewshot examples")
     parser.add_argument("--model", default="text-davinci-003", help="model name")
-    parser.add_argument("--output", default="output.txt", help="output file")
+    parser.add_argument("--output", help="output file")
     args = parser.parse_args()
 
     with open("prompt/fewshot_" + str(args.fewshotnum) + ".txt", "r") as f:
