@@ -2,7 +2,7 @@ import json
 import re
 
 
-def CAL(text):
+def cal(text):
     """
     :param text: a string of response from GPT-3
     :return: a string of the calculation result
@@ -26,7 +26,7 @@ def CAL(text):
     return str(output)
 
 
-def CRP(text):
+def crp(text):
     """
     :param text: a string of response from GPT-3
     :return: a string of the chemical reaction
@@ -64,7 +64,7 @@ def CRP(text):
         num = 1 if num_idx == 0 else int(reactant[:num_idx])
 
         reactant = reactant[num_idx:]
-        for key, value in count_atom(reactant).items():
+        for key, value in _count_atom(reactant).items():
             if key in atoms_d:
                 atoms_d[key] += value * num
             else:
@@ -83,11 +83,11 @@ def CRP(text):
         num = 1 if num_idx == 0 else int(product[:num_idx])
 
         product = product[num_idx:]
-        for key, value in count_atom(product).items():
+        for key, value in _count_atom(product).items():
             atoms_d[key] -= value * num
 
     # calculate the mask (question mark)
-    mask_d = count_atom(mask_formula)
+    mask_d = _count_atom(mask_formula)
     mask = -1
     for key, value in mask_d.items():
         if mask == -1:
@@ -109,7 +109,7 @@ def CRP(text):
     return output
 
 
-def MML(text):
+def mml(text):
     """
     :param text: a string of response from GPT-3
     :return: a string of the molecular mass
@@ -123,7 +123,7 @@ def MML(text):
     print("input:", formula)
 
     # get the dictionary of the chemical formula
-    formula_d = count_atom(formula)
+    formula_d = _count_atom(formula)
 
     # get the atomic weight dictionary
     with open("atomic_weight.json", "r") as f:
@@ -138,7 +138,7 @@ def MML(text):
     return str(molecular_mass) + " g/mol"
 
 
-def count_atom(formula):
+def _count_atom(formula):
     """
     :param formula: a string of chemical formula
     :return: a dictionary of the chemical formula
@@ -154,7 +154,7 @@ def count_atom(formula):
             num_idx_end += 1
         num = int(formula[num_idx_start : num_idx_end + 1])
         # get the dictionary of the content in the bracket * num
-        formula_d = {key: value * num for key, value in count_atom(in_bracket).items()}
+        formula_d = {key: value * num for key, value in _count_atom(in_bracket).items()}
         # remove the content in the bracket
         formula = formula[: formula.find("(")] + formula[num_idx_end + 1 :]
     else:
