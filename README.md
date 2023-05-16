@@ -1,5 +1,6 @@
 # GPT3withTools
-Use multiple external tools during reasoning of LLMs (GPT-3). Prompt and external tools dedicated to solving [NumGLUE task2](https://github.com/allenai/numglue) are given.
+Use multiple external tools during reasoning of LLMs (GPT-3).
+Prompt and external tools are dedicated to solving [NumGLUE Task2](https://github.com/allenai/numglue).
 
 ## Setting up environments
 - python 3.7.1+
