@@ -12,7 +12,7 @@ def CAL(text):
     i = 1
     while i <= len(text) and text[-i] != "\n":
         i += 1
-    formula = text[-i+1:-2]
+    formula = text[-i + 1 : -2]
     print("input:", formula)
 
     # calculate
@@ -37,13 +37,13 @@ def CRP(text):
     while i <= len(text) and text[-i] != "\n":
         i += 1
 
-    products = text[-i+1:].replace(",", "").split()[1:]
+    products = text[-i + 1 :].replace(",", "").split()[1:]
 
     # get reactants
     j = i + 1
     while j <= len(text) and text[-j] != "\n":
         j += 1
-    reactants = text[-j+1:-i].replace(",", "").split()[1:]
+    reactants = text[-j + 1 : -i].replace(",", "").split()[1:]
     print("input:", reactants, "=>", products)
 
     # if there is a question mark in the reactants,
@@ -119,7 +119,7 @@ def MML(text):
     i = 1
     while i <= len(text) and text[-i] != "\n":
         i += 1
-    formula = text[-i+1:]
+    formula = text[-i + 1 :]
     print("input:", formula)
 
     # get the dictionary of the chemical formula
@@ -146,17 +146,17 @@ def count_atom(formula):
     # if there is a bracket in formula
     if "(" in formula:
         # get the content in the bracket
-        in_bracket = formula[formula.find("(")+1:formula.find(")")]
+        in_bracket = formula[formula.find("(") + 1 : formula.find(")")]
         # get the number after the bracket
         num_idx_start = formula.find(")") + 1
         num_idx_end = num_idx_start
         while num_idx_end < len(formula) and formula[num_idx_end].isdigit():
             num_idx_end += 1
-        num = int(formula[num_idx_start:num_idx_end+1])
+        num = int(formula[num_idx_start : num_idx_end + 1])
         # get the dictionary of the content in the bracket * num
         formula_d = {key: value * num for key, value in count_atom(in_bracket).items()}
         # remove the content in the bracket
-        formula = formula[:formula.find("(")] + formula[num_idx_end+1:]
+        formula = formula[: formula.find("(")] + formula[num_idx_end + 1 :]
     else:
         formula_d = {}
 

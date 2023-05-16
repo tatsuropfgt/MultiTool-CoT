@@ -18,10 +18,7 @@ def gpt3_tools(args, fewshot):
         # wait for 1 second to avoid the api call limit
         time.sleep(1)
         # get response from GPT-3
-        response_gpt = gpt_api(
-            model=args.model,
-            prompt=prompt
-        )
+        response_gpt = gpt_api(model=args.model, prompt=prompt)
         # update prompt and answer
         prompt += response_gpt
         answer += response_gpt
@@ -33,12 +30,12 @@ def gpt3_tools(args, fewshot):
         i = 0
         while response_gpt[-i] != "<":
             i += 1
-        toolname = response_gpt[-i+2:-1]
+        toolname = response_gpt[-i + 2 : -1]
 
         # get tool response
         if toolname == "Calculator" and args.CAL:
             try:
-                response_CAL = CAL(response_gpt[:-i-2])
+                response_CAL = CAL(response_gpt[: -i - 2])
                 prompt += ">> " + response_CAL + "\n"
                 answer += ">> " + response_CAL + "\n"
             except:  # noqa: E722
@@ -48,7 +45,7 @@ def gpt3_tools(args, fewshot):
 
         elif toolname == "Chemical reaction predictor" and args.CRP:
             try:
-                response_CRP = CRP(response_gpt[:-i-2])
+                response_CRP = CRP(response_gpt[: -i - 2])
                 prompt += ">>" + "\n" + response_CRP + "\n"
                 answer += ">>" + "\n" + response_CRP + "\n"
             except:  # noqa: E722
@@ -58,7 +55,7 @@ def gpt3_tools(args, fewshot):
 
         elif toolname == "Molar mass list" and args.MML:
             try:
-                response_MML = MML(response_gpt[:-i-2])
+                response_MML = MML(response_gpt[: -i - 2])
                 prompt += ">> " + response_MML + "\n"
                 answer += ">> " + response_MML + "\n"
             except:  # noqa: E722
@@ -87,8 +84,12 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--question", help="question to ask")
     parser.add_argument("--CAL", default=True, help="whether to use Calculator")
-    parser.add_argument("--CRP", default=True, help="whether to use Chemical Reaction Predictor")
-    parser.add_argument("--MML", default=True, help="whether to use Molecular Mass List")
+    parser.add_argument(
+        "--CRP", default=True, help="whether to use Chemical Reaction Predictor"
+    )
+    parser.add_argument(
+        "--MML", default=True, help="whether to use Molecular Mass List"
+    )
     parser.add_argument("--fewshotnum", help="number of fewshot examples")
     parser.add_argument("--model", default="text-davinci-003", help="model name")
     parser.add_argument("--output", help="output file")
