@@ -36,12 +36,16 @@ def make_api_call(model, prompt):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--question", help="Question to ask")
-    parser.add_argument("--cal", default=True, help="Whether to use Calculator")
     parser.add_argument(
-        "--crp", default=True, help="Whether to use Chemical Reaction Predictor"
+        "--use_cal", action="store_true", help="Whether to use Calculator"
     )
     parser.add_argument(
-        "--mml", default=True, help="Whether to use Molecular Mass List"
+        "--use_crp",
+        action="store_true",
+        help="Whether to use Chemical Reaction Predictor",
+    )
+    parser.add_argument(
+        "--use_mml", action="store_true", help="Whether to use Molecular Mass List"
     )
     parser.add_argument("--few_shot", help="Text file listing few-shot examples")
     parser.add_argument("--model", default="text-davinci-003", help="Model name")
@@ -75,7 +79,7 @@ def main():
         tool_name = response_gpt[-i + 2 : -1]
 
         # Get tool response
-        if tool_name == "Calculator" and args.cal:
+        if tool_name == "Calculator" and args.use_cal:
             try:
                 response_cal = cal(response_gpt[: -i - 2])
                 prompt += TOOL_END_SEQUENCE + " " + response_cal + "\n"
@@ -84,8 +88,7 @@ def main():
                 print("Error is raised in Calculator:", e)
                 prompt += TOOL_END_SEQUENCE
                 answer += TOOL_END_SEQUENCE
-
-        elif tool_name == "Chemical reaction predictor" and args.crp:
+        elif tool_name == "Chemical reaction predictor" and args.use_crp:
             try:
                 response_crp = crp(response_gpt[: -i - 2])
                 prompt += TOOL_END_SEQUENCE + "\n" + response_crp + "\n"
@@ -95,7 +98,7 @@ def main():
                 prompt += TOOL_END_SEQUENCE
                 answer += TOOL_END_SEQUENCE
 
-        elif tool_name == "Molar mass list" and args.mml:
+        elif tool_name == "Molar mass list" and args.use_mml:
             try:
                 response_mml = mml(response_gpt[: -i - 2])
                 prompt += TOOL_END_SEQUENCE + " " + response_mml + "\n"

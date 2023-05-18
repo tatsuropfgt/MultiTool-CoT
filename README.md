@@ -25,6 +25,9 @@ pip install -r requirements.txt
 python main.py \
     --question "Find the amount of Calcium hydroxide that is required to react with 2 moles of Carbon dioxide to form 2 moles of Calcium carbonate along with 2 moles of Water" \
     --few_shot "prompt/few_shot_5.txt" \
+    --use_cal \
+    --use_crp \
+    --use_mml \
     --output "output.txt"
 ```
 
