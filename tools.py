@@ -156,7 +156,7 @@ def _count_atom(formula):
         # get the dictionary of the content in the bracket * num
         formula_d = {key: value * num for key, value in _count_atom(in_bracket).items()}
         # remove the content in the bracket
-        formula = formula[: formula.find("(")] + formula[num_idx_end + 1 :]
+        formula = formula[: formula.find("(")] + formula[num_idx_end:]
     else:
         formula_d = {}
 
