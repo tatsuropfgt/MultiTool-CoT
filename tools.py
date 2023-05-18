@@ -152,7 +152,7 @@ def _count_atom(formula):
         num_idx_end = num_idx_start
         while num_idx_end < len(formula) and formula[num_idx_end].isdigit():
             num_idx_end += 1
-        num = int(formula[num_idx_start : num_idx_end + 1])
+        num = int(formula[num_idx_start : num_idx_end])
         # get the dictionary of the content in the bracket * num
         formula_d = {key: value * num for key, value in _count_atom(in_bracket).items()}
         # remove the content in the bracket
