@@ -1,4 +1,4 @@
-# GPTaug
+# MultiTool-GPT
 Use multiple external tools during reasoning of LLMs (GPT-3).
 Prompt and external tools are dedicated to solving [NumGLUE Task2](https://github.com/allenai/numglue).
 
@@ -19,7 +19,7 @@ python -m venv env
 pip install -r requirements.txt
 ```
 
-## Running GPTaug
+## Running MultiTool-GPT
 
 ```bash
 python main.py \
