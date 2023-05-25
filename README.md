@@ -23,7 +23,7 @@ pip install -r requirements.txt
 
 ```bash
 python main.py \
-    --question "Find the amount of H2O that is required to react with 2 moles of Be2C to form 4 moles of Be(OH)2 along with 2 moles of CH4" \
+    --question "Find the mass percentage of C in Aluminum carbonate" \
     --few_shot "prompt/few_shot_5.txt" \
     --use_cal \
     --use_crp \
