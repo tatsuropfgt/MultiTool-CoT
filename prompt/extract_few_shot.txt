@@ -1,0 +1,25 @@
+Extract the answer in Arabic numerals from each of the following sentences:
+
+Sentence: Therefore, 6 moles of Chlorine are required.
+Answer: 6
+
+Sentence: Therefore, the mass percentage of N in Dinitrogen pentoxide is 25.93%.
+Answer: 25.93
+
+Sentence: Therefore, Penelope would have saved 8760 dollars at the end of the year.
+Answer: 8760
+
+Sentence: Therefore, the mass percentage of B in H3BO3 is 17.74%.
+Answer: 17.74
+
+Sentence: Therefore, 2 moles of H2O are formed.
+Answer: 2
+
+Sentence: Therefore, the shopkeeper has 78 red color cards in total.
+Answer: 78
+
+Sentence: Therefore, 10 moles of N2O weigh 440 g.
+Answer: 440
+
+Sentence: Therefore, the molecular weight of the compound is 132 g/mol.
+Answer: 132
