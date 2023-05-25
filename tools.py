@@ -94,7 +94,7 @@ def crp(text):
             mask = atoms_d[key] / value
         # if the mask is not an integer, return ""
         elif mask != atoms_d[key] / value:
-            return ""
+            raise ValueError("The mask is not an integer")
 
     # replace the mask with the calculated number
     products[mask_idx] = str(int(mask)) + mask_formula
