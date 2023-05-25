@@ -23,13 +23,28 @@ pip install -r requirements.txt
 
 ```bash
 python main.py \
-    --question "Find the amount of Calcium hydroxide that is required to react with 2 moles of Carbon dioxide to form 2 moles of Calcium carbonate along with 2 moles of Water" \
+    --question "Find the amount of H2O that is required to react with 2 moles of Be2C to form 4 moles of Be(OH)2 along with 2 moles of CH4" \
     --few_shot "prompt/few_shot_5.txt" \
     --use_cal \
     --use_crp \
     --use_mml \
     --output "output.txt"
 ```
+
+## Evaluating GPTaug on NumGLUE task2
+
+```bash
+git clone https://github.com/allenai/numglue.git
+python eval.py \
+    --filepath "numglue/data/NumGLUE_test.json" \
+    --num_examples 3 \
+    --few_shot "prompt/few_shot_5.txt" \
+    --use_cal \
+    --use_crp \
+    --use_mml \
+    --output "output.csv"
+```
+
 
 ## References
 - [NumGLUE](https://github.com/allenai/numglue) (Task2)
