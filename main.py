@@ -17,6 +17,13 @@ PROMPT_TEMPLATE = textwrap.dedent(
     Q: {question}
     """
 )
+EXTRACT_PROMPT_TEMPLATE = textwrap.dedent(
+    """\
+    {few_shot}
+
+    Sentence: {sentence}
+    """
+)
 TOOL_START_SEQUENCE = "<<"
 TOOL_END_SEQUENCE = ">>"
 MAX_CALL_TOOLS = 10
@@ -31,6 +38,24 @@ def make_api_call(model, prompt):
         stop=[TOOL_END_SEQUENCE],
     )
     return response["choices"][0]["text"]
+
+
+def extract_finalanswer(answer, model):
+    with open("prompt/extract_few_shot.txt") as f:
+        few_shot = f.read()
+    lines = answer.split("\n")
+    for line in lines:
+        if line.startswith("Therefore"):
+            sentence = line
+
+    extract_prompt = EXTRACT_PROMPT_TEMPLATE.format(
+        few_shot=few_shot, sentence=sentence
+    )
+    response = make_api_call(model="text-davinci-003", prompt=extract_prompt)
+    final_answer = response.split()[1]
+    print("final_answer:", final_answer)
+    print("--------------------")
+    return final_answer
 
 
 def main():
@@ -111,8 +136,11 @@ def main():
             prompt += TOOL_END_SEQUENCE
             answer += TOOL_END_SEQUENCE
 
+    final_answer = extract_finalanswer(answer, args.model)
+
     with open(args.output, "w") as f:
-        f.write(answer)
+        f.write(answer + "\n")
+        f.write("final_answer: " + final_answer)
 
     print("Output saved to", args.output)
 
