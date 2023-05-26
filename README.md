@@ -1,5 +1,4 @@
 # MultiTool-CoT
-
 This repository contains the code for the paper "MultiTool-CoT: GPT-3 Can Use Multiple External Tools with Chain of Thought Prompting (Inaba et al., ACL2023)".
 
 ## Environment
@@ -13,18 +12,32 @@ python -m venv env
 pip install -r requirements.txt
 ```
 
-## Running MultiTool-GPT
+## Running MultiTool-CoT
 
 ```bash
 export OPENAI_ORGANIZATION="OPENAI_ORGANIZATION"
 export OPENAI_API_KEY="YOUR_OPENAI_API_KEY"
 python main.py \
-    --question "Find the amount of Calcium hydroxide that is required to react with 2 moles of Carbon dioxide to form 2 moles of Calcium carbonate along with 2 moles of Water" \
+    --question "Find the mass percentage of C in Aluminum carbonate" \
     --few_shot "prompt/few_shot_5.txt" \
     --use_cal \
     --use_crp \
     --use_mml \
     --output "output.txt"
+```
+
+## Evaluating MultiTool-CoT on NumGLUE task2
+
+```bash
+git clone https://github.com/allenai/numglue.git
+python eval.py \
+    --filepath "numglue/data/NumGLUE_test.json" \
+    --num_examples 3 \
+    --few_shot "prompt/few_shot_5.txt" \
+    --use_cal \
+    --use_crp \
+    --use_mml \
+    --output "output.csv"
 ```
 
 ## Citation
