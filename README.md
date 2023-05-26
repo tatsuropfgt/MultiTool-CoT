@@ -1,18 +1,11 @@
 # MultiTool-CoT
-Use multiple external tools during reasoning of LLMs (GPT-3).
-Prompt and external tools are dedicated to solving [NumGLUE Task2](https://github.com/allenai/numglue).
+This repository contains the code for the paper "MultiTool-CoT: GPT-3 Can Use Multiple External Tools with Chain of Thought Prompting (Inaba et al., ACL2023)".
 
-## Setting up environments
-- python 3.7.1+
+## Environment
 
-### Set environment variables
+- Python: 3.7.1+
 
-```bash
-export OPENAI_ORGANIZATION="OPENAI_ORGANIZATION"
-export OPENAI_API_KEY="YOUR_OPENAI_API_KEY"
-```
-
-### Create virtualenv
+## Installation
 
 ```bash
 python -m venv env
@@ -22,6 +15,8 @@ pip install -r requirements.txt
 ## Running MultiTool-CoT
 
 ```bash
+export OPENAI_ORGANIZATION="OPENAI_ORGANIZATION"
+export OPENAI_API_KEY="YOUR_OPENAI_API_KEY"
 python main.py \
     --question "Find the mass percentage of C in Aluminum carbonate" \
     --few_shot "prompt/few_shot_5.txt" \
@@ -45,6 +40,22 @@ python eval.py \
     --output "output.csv"
 ```
 
+## Citation
+
+```bibtex
+@inproceedings{inaba-etal-2023-multi,
+    title = "{M}ulti{T}ool-{C}o{T}: {GPT}-3 Can Use Multiple External Tools with Chain of Thought Prompting",
+    author = "Inaba, Tatsuro  and
+      Kiyomaru, Hirokazu  and
+      Cheng, Fei  and
+      Kurohashi, Sadao",
+    booktitle = "Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics",
+    month = july,
+    year = "2023",
+    address = "Toronto, Canada",
+    publisher = "Association for Computational Linguistics",
+}
+```
 
 ## References
 - [NumGLUE](https://github.com/allenai/numglue) (Task2)
