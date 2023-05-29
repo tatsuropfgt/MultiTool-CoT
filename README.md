@@ -1,5 +1,6 @@
 # MultiTool-CoT
-This repository contains the code for the paper "MultiTool-CoT: GPT-3 Can Use Multiple External Tools with Chain of Thought Prompting (Inaba et al., ACL2023)".
+This repository contains the code for the paper "MultiTool-CoT: GPT-3 Can Use Multiple External Tools with Chain of Thought Prompting (Inaba et al., ACL2023)". 
+[paper](https://arxiv.org/abs/2305.16896)
 
 ## Environment
 
